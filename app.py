@@ -39,3 +39,11 @@ class Course:
     #WHY? To organise students into courses, making it easier to track their progress and performance.
     def enroll(self, student):
         self.students.append(student)
+
+    def plot_performance(self): #Visualises grade trends using matplotlib. #WHY? To track student progress.
+        for s in self_students:
+            plt.plot(s.grades, label=s.name, marker='o')
+            plt.title(f"Performance in {self.course_name}")
+            plt.ylabel("Grades")
+            plt.legend()
+            plt.show()     
