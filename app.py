@@ -61,3 +61,4 @@ if __name__ == "__main__":
         python_class.plot_performance() #Plots the performance of the student in the course using matplotlib. 
     except ValueError as e:
         print(f"Error:{e}") #try statements must have an except block to handle potential errors.
+#This code added course class and matplotlib visualisation to track student performance.
