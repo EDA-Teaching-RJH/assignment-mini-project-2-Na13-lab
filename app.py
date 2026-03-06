@@ -41,9 +41,23 @@ class Course:
         self.students.append(student)
 
     def plot_performance(self): #Visualises grade trends using matplotlib. #WHY? To track student progress.
-        for s in self_students:
+        for s in self.students:
             plt.plot(s.grades, label=s.name, marker='o')
             plt.title(f"Performance in {self.course_name}")
             plt.ylabel("Grades")
             plt.legend()
-            plt.show()     
+            plt.show()    
+if __name__ == "__main__":
+    welcome_user("Instructor")
+    try: 
+        student_a = Student("Nuno", "STU-00001")
+        student_a.add_grade(75)
+        student_a.add_grade(85) #This creates a student object and adds grades to it.
+        #WHY> To demonstrate the creation of a student and record their grades in the system.
+        python_class = Course("Advanced Python")
+        python_class.enroll(student_a) #This creates a course and enrolls the student in.
+        #WHY? To organise the student into a course and save their grades to track their performance.
+        save_to_json({"course": python_class.course_name, "student": student_a.name, "grades": student_a.grades})
+        python_class.plot_performance() #Plots the performance of the student in the course using matplotlib. 
+    except ValueError as e:
+        print(f"Error:{e}") #try statements must have an except block to handle potential errors.
