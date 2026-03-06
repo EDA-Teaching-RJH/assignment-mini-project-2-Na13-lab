@@ -13,6 +13,7 @@ class Person:
 class Student(Person):
     def __init__(self, name, student_id):
         super().__init__(name) #Calls parents constructor 
+        self.grades = [] #List to store the grades of the students.
         
         if validate_student_id(student_id):
             self.student_id = student_id
@@ -21,10 +22,9 @@ class Student(Person):
         #Prevents the object from being created with an invalid student ID.
         #WHY? To ensure that only valid student IDs are accepted, maintaining data integrity in the system.
 
-        self.grades = [] #List to store the grades of the students.
     def add_grade(self, grade):
-            if 0 <= grade <= 100:
-                self.grades.append(grade) #Adds a grade to the student's grade list. 
+        if 0 <= grade <= 100:
+            self.grades.append(grade) #Adds a grade to the student's grade list. 
                 #WHY? To allow for the recording of student performance in the system.
 #Implementation of inheritance and getters/setters to manage student data effectively.(Workshop 9)
 
@@ -46,6 +46,7 @@ class Course:
             plt.title(f"Performance in {self.course_name}")
             plt.ylabel("Grades")
             plt.legend()
+            plt.savefig('performance_graph.png') #Saves the file.
             plt.show()    
 if __name__ == "__main__":
     welcome_user("Instructor")
