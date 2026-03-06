@@ -11,6 +11,6 @@ class TestSystem(unittest.TestCase):
         self.assertEqual(s.name, "Test") #Checks that the name is correctly set. 
         #WHY? To ensure that valid names are being accepted and stored properly.
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     unittest.main()
 #Added unit tests for ID validation and class properties to make sure they're working as expected.
