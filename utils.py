@@ -18,3 +18,5 @@ def save_to_json(data, filename="data.json"):
     #WHY? To prevent data loss and allow for easy data retrieval if needed.
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
+
+#Setup: Creates an utility library with REGEX validation and JSON support.(Workshops 7 & 8)
