@@ -26,4 +26,5 @@ class Student(Person):
             if 0 <= grade <= 100:
                 self.grades.append(grade) #Adds a grade to the student's grade list. 
                 #WHY? To allow for the recording of student performance in the system.
-                
+#Implementation of inheritance and getters/setters to manage student data effectively.(Workshop 9)
+      
