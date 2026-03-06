@@ -27,4 +27,6 @@ class Student(Person):
                 self.grades.append(grade) #Adds a grade to the student's grade list. 
                 #WHY? To allow for the recording of student performance in the system.
 #Implementation of inheritance and getters/setters to manage student data effectively.(Workshop 9)
-      
+
+import matplotlib.pyplot as plt
+#This imports the matplotlib library, which is used for creating visualizations such as charts and graphs.
