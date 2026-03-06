@@ -21,8 +21,8 @@ class Student(Person):
         #Prevents the object from being created with an invalid student ID.
         #WHY? To ensure that only valid student IDs are accepted, maintaining data integrity in the system.
 
-            self.grades = [] #List to store the grades of the students.
-        def add_grade(self, grade):
+        self.grades = [] #List to store the grades of the students.
+    def add_grade(self, grade):
             if 0 <= grade <= 100:
                 self.grades.append(grade) #Adds a grade to the student's grade list. 
                 #WHY? To allow for the recording of student performance in the system.

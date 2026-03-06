@@ -1,0 +1,8 @@
+{
+    "course": "Advanced Python",
+    "student": "Nuno",
+    "grades": [
+        75,
+        85
+    ]
+}
