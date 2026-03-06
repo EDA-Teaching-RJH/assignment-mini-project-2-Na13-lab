@@ -34,7 +34,7 @@ import matplotlib.pyplot as plt
 class Course:
     def __init__(self, course_name):
         self.course_name = course_name
-        self.students =[] 
+        self.students = [] 
     #Manages course information and student enrollment, allowing us to keep track of which students are enrolled in which courses.
     #WHY? To organise students into courses, making it easier to track their progress and performance.
     def enroll(self, student):
